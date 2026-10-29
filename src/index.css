@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://cdn.fontcdn.ir/Font/Persian/IranSans/iran-sans.css');
+@import "tailwindcss";
+
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("IRANSans"), local("IRANSansX"), local("IRANSansWeb"),
+    url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("IRANSans Medium"), local("IRANSansX Medium"), local("IRANSansWeb_Medium"),
+    url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IRANSans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("IRANSans Bold"), local("IRANSansX Bold"), local("IRANSansWeb_Bold"),
+    url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2") format("woff2");
+}
+
+:root {
+  --color-bg-dark: #101216;
+  --color-bg-card: #1a1d23;
+  --color-bg-card-inner: #21252d;
+  --color-border-subtle: rgba(255, 255, 255, 0.09);
+  --color-border-card: rgba(255, 255, 255, 0.12);
+  --color-bg-navy: #101216;
+  --color-bg-navy-bright: #1a1d23;
+  --color-bg-navy-light: #16191f;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B99321;
+  --color-gold-light: #ECD379;
+}
+
+@theme {
+  --color-brand-navy: var(--color-bg-navy);
+  --color-brand-navy-bright: var(--color-bg-navy-bright);
+  --color-brand-navy-light: var(--color-bg-navy-light);
+  --color-brand-gold: var(--color-gold);
+  --color-brand-gold-dark: var(--color-gold-dark);
+  --color-brand-gold-light: var(--color-gold-light);
+  --font-sans: "IRANSans", "IRANSansX", "IRANSansWeb", "Vazirmatn", "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Oswald", "Bebas Neue", "IRANSans", "Vazirmatn", sans-serif;
+}
+
+html, body {
+  background-color: #101216;
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Dedicated IRANSans Menu Typography Class */
+.font-iransans {
+  font-family: "IRANSans", "IRANSansX", "IRANSansWeb", "Vazirmatn", sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+/* Multi-Device Responsive Container: Mobile -> Tablet -> Laptop -> Monitor -> All-in-One (24"-32" 2K/4K) */
+.responsive-shell {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  /* Tablet */
+  .responsive-shell {
+    max-width: 720px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Large Tablet / iPad Pro */
+  .responsive-shell {
+    max-width: 960px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Laptop (13" - 16") */
+  .responsive-shell {
+    max-width: 1220px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Desktop Monitor (22" - 27") */
+  .responsive-shell {
+    max-width: 1420px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* All-in-One & Ultra-Wide Displays (iMac / 27"-34" AIO) */
+  .responsive-shell {
+    max-width: 1680px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Hide scrollbars on horizontal app chip bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Native Mobile/Tablet App Glass Shell */
+.app-glass-bar {
+  background: rgba(16, 18, 22, 0.88);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+}
+
+/* Custom silver metallic sheen for CTA Banner */
+.metallic-cta-bg {
+  background: 
+    radial-gradient(ellipse 35% 130% at 31% 50%, rgba(255, 255, 255, 0.35) 0%, rgba(200, 210, 225, 0.14) 38%, rgba(26, 29, 35, 0.96) 78%),
+    linear-gradient(125deg, #1b1e24 0%, #2b303a 28%, #525967 32%, #1d2027 46%, #16181e 100%);
+}
+
+/* Subtle top-down glassmorphic card gradient matching dark luxury aesthetic */
+.av-card {
+  background: linear-gradient(180deg, rgba(34, 38, 46, 0.72) 0%, rgba(20, 23, 28, 0.88) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  transition: border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.av-card-inner {
+  background: linear-gradient(180deg, rgba(40, 45, 54, 0.58) 0%, rgba(24, 27, 34, 0.82) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.av-pill-btn {
+  background: linear-gradient(180deg, #e5e7eb 0%, #9ca3af 100%);
+  color: #111317;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.av-pill-btn:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+}
+
+.av-rect-btn {
+  background: linear-gradient(90deg, #f3f4f6 0%, #9ca3af 100%);
+  color: #111317;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.av-rect-btn:hover {
+  background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 100%);
+}
+
+.hero-display-text {
+  font-family: "Oswald", "Bebas Neue", "Vazirmatn", sans-serif;
+}
+
+.hero-line-1 {
+  background: linear-gradient(180deg, #9ca3af 0%, #d1d5db 48%, #8b93a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-line-2 {
+  background: linear-gradient(180deg, #e2e8f0 0%, #ffffff 45%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-portrait-mask {
+  -webkit-mask-image: 
+    radial-gradient(ellipse 75% 86% at 50% 44%, #000 52%, rgba(0, 0, 0, 0.75) 70%, rgba(0, 0, 0, 0.2) 86%, transparent 100%),
+    linear-gradient(to bottom, #000 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: 
+    radial-gradient(ellipse 75% 86% at 50% 44%, #000 52%, rgba(0, 0, 0, 0.75) 70%, rgba(0, 0, 0, 0.2) 86%, transparent 100%),
+    linear-gradient(to bottom, #000 82%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.hero-arc-mask {
+  -webkit-mask-image: linear-gradient(105deg, transparent 38%, rgba(0, 0, 0, 0.4) 52%, #000 70%);
+  mask-image: linear-gradient(105deg, transparent 38%, rgba(0, 0, 0, 0.4) 52%, #000 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101216;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a34;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f4654;
+}

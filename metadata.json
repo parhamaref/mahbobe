@@ -1,0 +1,6 @@
+{
+  "name": "TAJ Global",
+  "description": "Strategic Migration Design Center for Medical & Academic Elites under Dr. Tajeddini",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
